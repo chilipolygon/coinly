@@ -4,7 +4,9 @@ const Header = () => {
     return (
         <div className="header-container">
             <div className='coinly-wrapper'>
-                <span className='coinly-text'>Coinly</span>
+                <a href='/' className='coinly-homepage'>
+                    <span className='coinly-text'>Coinly</span>
+                </a>
             </div>
         </div>
     )

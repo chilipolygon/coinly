@@ -9,12 +9,12 @@ export function numberWithCommas(x) {
 }
 
 const Carousel = () => {
+    // eslint-disable-next-line
     const [trending, setTrending] = useState([]);
 
     const fetchTrendingCoins = async () => {
         const { data } = await axios.get(TrendingCoins('USD'));
         setTrending(data);
-        console.log(trending)
     };
 
     useEffect(() => {

@@ -45,6 +45,9 @@ body {
   z-index: 1;
 }
 
+.coinly-homepage {
+  text-decoration: none;
+}
 
 .banner-background {
   height: 30vh;
@@ -113,6 +116,7 @@ body {
 }
 
 .coinsable-header .text-1 {
+  padding: 25px 0px;
   font-weight: 400;
   font-size: 1.2em;
 }
@@ -123,8 +127,126 @@ body {
   opacity: .5;
 }
 
-#outlined-basic {}
 
+/*-------------INPUT BAR----------------------*/
+
+.input_container {
+  position: absolute;
+  top: 10vh;
+  align-items: center;
+
+}
+
+.question,
+.question_default,
+.question_label {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+
+.question:focus {
+  outline: 0;
+}
+
+.question {
+  font-size: 1.2em;
+  font-weight: 400;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 90%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden;
+  /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+/* Underline and Placeholder */
+.question+.question_label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+.question:focus+.question_label {
+  width: 90%;
+}
+
+.question:focus,
+.question:valid {
+  padding-top: -10px;
+}
+
+.question:focus+.question_label>.question_default,
+.question:valid+.question_label>.question_default {
+  top: -55px;
+  font-size: .6em;
+  color: #8F8F8F;
+}
+
+.question:valid+.question_label {
+  border-color: green;
+}
+
+.question:invalid {
+  box-shadow: none;
+}
+
+.question+.question_label>.question_default {
+  font-weight: 400;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 1em;
+  top: -36px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.fa-magnifying-glass {
+  opacity: .5;
+  font-size: .7em;
+  position: relative;
+  bottom: 2.5px;
+  right: 3px;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+.coinstable-wrapper {
+  position: relative;
+}
+
+.whole-coinstable-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 300px;
+}
 
 
 
