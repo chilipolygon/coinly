@@ -203,7 +203,7 @@ const CoinsTable = () => {
                                                         {numberWithCommas(
                                                             row.market_cap.toString().slice(0, -6)
                                                         )}
-                                                        M
+
                                                     </TableCell>
                                                 </TableRow>
                                             );
