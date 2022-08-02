@@ -17,6 +17,7 @@ import {
 import { makeStyles } from '@mui/styles';
 import { useNavigate } from "react-router-dom";
 import { numberWithCommas } from './Carousel';
+import Footer from "./Footer";
 
 
 const CoinsTable = () => {
@@ -225,6 +226,7 @@ const CoinsTable = () => {
                                 setPage(value);
                             }}
                         />
+                        <Footer />
                     </Container>
                 </ThemeProvider>
             </div>
