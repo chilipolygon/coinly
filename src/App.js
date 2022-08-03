@@ -11,7 +11,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Homepage />} exact />
-          <Route path='/coins' element={<CoinPage />} exact />
+          <Route path='/coins/:id' element={<CoinPage />} exact />
         </Routes>
       </div>
     </BrowserRouter>

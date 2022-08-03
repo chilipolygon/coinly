@@ -10,7 +10,7 @@
 
 
 body {
-  background-color: #000;
+  background-color: #0f0f0f;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -255,7 +255,107 @@ body {
 }
 
 
-@media only screen and (max-width: 490px) {
+/* ------------------------COIN PAGE ------------------------*/
+
+.coinpage-container {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  height: 80vh;
+}
+
+.coinpage-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5vh;
+}
+
+.coinpage-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  border-right: 2px solid #808080;
+  position: relative;
+  height: 100%;
+}
+
+.coinpage-marketData {
+  align-items: flex-start;
+  position: relative;
+  top: 3vh;
+}
+
+.coinpage-coin-desc {
+  width: 400px;
+  text-align: justify;
+  padding: 25px 0;
+}
+
+.coinpage-coin-name {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+.coinpage-market {
+  margin-top: 10px;
+  font-size: 1.5em;
+
+}
+
+.coinpage-market .bold-text {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.coinpage-coin-desc a {
+  color: #ff008c;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none
+    /*lock redirect from coingecko api */
+}
+
+.coinpage-coin-img {
+  width: 200px;
+  height: auto;
+}
+
+.coinpage-footer {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1450px) {
+  .coinpage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coinpage-sidebar {
+    width: 100%;
+    border: none
+  }
+
+  .coinpage-coin-desc {
+    width: 550px;
+    padding: 0 20px 0 20px;
+  }
+
+  .coinpage-marketData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
   .banner-text {
     padding: 0px 10px 0px 10px;
     font-size: 2em
@@ -263,5 +363,15 @@ body {
 
   .coinly-text {
     font-size: 1.5em;
+  }
+
+  .coinpage-coin-desc {
+    max-width: 95%;
+    padding: 0;
+  }
+
+  .coinpage-marketData {
+    align-items: flex-start;
+    width: 90%;
   }
 }

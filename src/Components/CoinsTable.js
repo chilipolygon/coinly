@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { CoinList } from '../Config/Api'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { CoinList } from '../Config/Api';
 import {
     TableContainer,
     Table,
@@ -86,7 +86,7 @@ const CoinsTable = () => {
     return (
         <div className='coinstable-wrapper'>
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"></link>
             <div className='coinstable-container'>
                 <div className='coinstable-header'>
@@ -182,7 +182,7 @@ const CoinsTable = () => {
                                                             color: "#fff",
                                                             fontFamily: "Montserrat",
                                                         }}>
-                                                        {"$"}{" "}
+                                                        {"$"}
                                                         {numberWithCommas(row.current_price.toFixed(2))}
                                                     </TableCell>
                                                     <TableCell
@@ -200,11 +200,10 @@ const CoinsTable = () => {
                                                             color: "#fff",
                                                             fontFamily: "Montserrat",
                                                         }}>
-                                                        {"$"}{" "}
+                                                        {"$"}
                                                         {numberWithCommas(
                                                             row.market_cap.toString().slice(0, -6)
-                                                        )}
-
+                                                        )}M
                                                     </TableCell>
                                                 </TableRow>
                                             );
