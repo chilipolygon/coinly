@@ -6,7 +6,7 @@ import CoinInfo from '../Components/CoinInfo';
 import { numberWithCommas } from '../Components/Carousel';
 import { LinearProgress } from '@mui/material';
 import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+
 
 const CoinPage = () => {
     const { id } = useParams();
@@ -101,9 +101,6 @@ const CoinPage = () => {
                         </div>
                     </>
                 )}
-            {/* <div className='coinpage-footer'>
-                <Footer />
-            </div> */}
         </>
     )
 }

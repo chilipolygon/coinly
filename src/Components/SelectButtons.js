@@ -1,8 +1,12 @@
 import React from 'react';
 
-const SelectButtons = ({ children, onClick }) => {
+const SelectButtons = ({ children, selected, onClick }) => {
     return (
-        <span
+        <span style={{
+            backgroundColor: selected ? "#fff" : "",
+            color: selected ? "#000" : "",
+        }
+        }
             className='coin-info-buttons'
             onClick={onClick}
         >

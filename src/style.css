@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
 
+:root {
+  --primary-font: "Montserrat", sans-serif;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +15,7 @@
 
 
 body {
-  background-color: #0f0f0f;
+  background-color: #000;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -38,7 +43,7 @@ body {
 .coinly-text {
   position: relative;
   left: 35px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   color: #fff;
   font-size: 2em;
   font-weight: 800;
@@ -63,7 +68,7 @@ body {
 
 .banner-container {
   max-width: 800px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   font-size: 1em;
   font-weight: 800;
   text-shadow: 0 0 10px #929292;
@@ -97,7 +102,7 @@ body {
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
 }
 
 
@@ -109,7 +114,7 @@ body {
 }
 
 .coinsable-header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +145,7 @@ body {
 .question,
 .question_default,
 .question_label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   display: block;
   margin: 10px;
   padding: 5px;
@@ -249,7 +254,7 @@ body {
 }
 
 .footer-container {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   padding: 2em 0;
   font-size: .7em;
   color: #fff;
@@ -260,7 +265,7 @@ body {
 
 .coinpage-container {
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   display: flex;
   height: 80vh;
 }
@@ -337,7 +342,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   margin-top: 25px;
   font-family: sans-serif;
 }
@@ -354,13 +359,18 @@ body {
 .coin-info-buttons {
   border: 1px solid #fff;
   border-radius: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   cursor: pointer;
   width: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0px 10px 0px;
+}
+
+.coin-info-buttons:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 @media screen and (max-width: 1450px) {
@@ -385,6 +395,16 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .coin-info-container {
+    width: 80vw;
+    margin-top: 5vh;
+  }
+
+  .coinpage-coin-img {
+    width: 150px;
+  }
+
 }
 
 @media screen and (max-width: 560px) {
@@ -406,4 +426,16 @@ body {
     align-items: flex-start;
     width: 90%;
   }
+
+  .coin-info-container {
+    width: 100vw;
+    margin-top: 5vh;
+  }
+
+  .coinpage-coin-img {
+    width: 100px;
+  }
 }
+
+
+/* ------------------404----------------- */

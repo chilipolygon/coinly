@@ -9,10 +9,8 @@ import { Line } from 'react-chartjs-2';
 import { CircularProgress } from '@mui/material';
 // eslint-disable-next-line
 import Chart from 'chart.js/auto';
-import externalTooltipHandler from "./ExternalTooltipHandler"
 import { chartDays } from '../Config/Data';
 import SelectButtons from './SelectButtons';
-
 
 const CoinInfo = ({ coin }) => {
     console.clear();
@@ -54,7 +52,7 @@ const CoinInfo = ({ coin }) => {
                                 datasets: [
                                     {
                                         data: historicData.map((id) => id[1]),
-                                        label: `Price ( Past ${days} Days ) in USD`,
+                                        // label: `Price ( Past ${days} Days ) In USD`,
                                     },
                                 ],
                             }}
@@ -62,32 +60,62 @@ const CoinInfo = ({ coin }) => {
                                 elements: {
                                     point: {
                                         radius: 0,
-                                        hoverRadius: 20,
+                                        hoverRadius: 5,
                                         borderColor: "#fff",
                                         borderWidth: 2,
+                                        hoverBackgroundColor: "#fff",
                                     },
                                     line: {
                                         borderWidth: 2,
-                                        borderColor: "#fff",
+
+                                        borderColor: (historicData[historicData.length - 1][1] - historicData[0][1]) > 0 ? "#76ff63" : "#ff2b2b",
                                     }
                                 },
                                 interaction: {
                                     mode: 'index',
                                     intersect: false,
                                 },
+                                scales: {
+                                    y: {
+                                        grid: {
+                                            display: false
+                                        }
+                                    },
+                                    x: {
+                                        grid: {
+                                            display: false
+                                        }
+                                    }
+                                },
 
-                                // There is a bug here that cause the days buttons dissapear
-                                //
-                                // plugins: {
-                                //     tooltip: {
-                                //         enabled: false,
-                                //         position: 'average',
-                                //         external: externalTooltipHandler
-                                //     }
-                                // }
+                                responsive: true,
+
+                                plugins: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    tooltip: {
+                                        intersect: false,
+                                        displayColors: false,
+                                        backgroundColor: "rgba(0, 0, 0, .7)",
+                                        bodyColor: "#fff",
+                                        borderWidth: 1,
+                                        titleColor: "#fff",
+                                        titleAlign: "center",
+                                        titleFont: {
+                                            weight: "bold",
+                                            size: 15
+                                        },
+                                        yAlign: "top",
+                                        xAlign: "center",
+                                        padding: 10,
+                                        bodyFont: {
+                                            size: 20,
+                                        }
+                                    }
+                                }
                             }}
                         />
-
                         <div className='coin-info-buttons-container'>
                             {chartDays.map((day) => (
                                 <SelectButtons
