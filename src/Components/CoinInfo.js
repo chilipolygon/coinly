@@ -106,8 +106,8 @@ const CoinInfo = ({ coin }) => {
                                             weight: "bold",
                                             size: 15
                                         },
-                                        yAlign: "top",
-                                        xAlign: "center",
+                                        yAlign: "bottom",
+                                        xAlign: "right",
                                         padding: 10,
                                         bodyFont: {
                                             size: 20,
