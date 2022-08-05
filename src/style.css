@@ -33,7 +33,7 @@ body {
 }
 
 .header-container {
-  background-color: none;
+  background-color: transparent;
 }
 
 .coinly-wrapper {
@@ -436,6 +436,3 @@ body {
     width: 100px;
   }
 }
-
-
-/* ------------------404----------------- */
